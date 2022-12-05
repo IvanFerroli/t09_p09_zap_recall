@@ -1,10 +1,15 @@
-import Card from './Card.js'
+import Card from "./Card"
+import styled from "styled-components";
 
 export default function Display(props) {
+    const {deck} = props
+    const {isOpened, isFliped, setOpened, setFliped} = props
+    console.log(props)
     return(
-        <div className="display">
-            <Card deck={props.deck}/>
-        </div>
+        <>
+
+            {deck.map((card) => <Card key={card.id} card={card} open={()=> setOpened(card.id)}/>)}
+            
+        </>
     )
 }
-
