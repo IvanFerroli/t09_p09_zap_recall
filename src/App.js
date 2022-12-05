@@ -1,7 +1,14 @@
+import Top from './components/Top'
+import Display from './components/Display'
+import Footer from './components/Footer'
+import Deck from './Deck'
+
 function App() {
   return (
     <>
-      <h1>batata</h1>
+      <Top />
+      <Display deck={Deck}/>
+      <Footer />
     </>
   );
 }
